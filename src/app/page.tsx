@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Recipe from "@/components/Recipe";
+import Recipe from "@/components/RecipeCard";
 import recipesData from "@/data/recipes.json";
 
 type Ingredient = {
@@ -27,7 +27,7 @@ export default function Home() {
       <main className="items-center bg-cream">
          <Header />
          <h1 className="text-4xl text-center ">Welcome to My Recipe App</h1>
-         <ul>
+         <ul className="grid grid-cols-3 gap-6 ml-8 mr-8">
             {typedRecipesData.map((recipe) => (
                <li key={recipe.id}>
                   <Recipe {...recipe} />

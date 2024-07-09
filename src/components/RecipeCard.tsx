@@ -30,14 +30,14 @@ const Recipe: React.FC<RecipeProps> = ({
    ustensils,
 }) => {
    return (
-      <article className="mb-4 p-4 border rounded-lg bg-white shadow-md">
+      <article className="custom-card mb-4 p-4 border rounded-lg bg-white shadow-md">
          <figure>
             <Image
                src={`/pictures/${image}`}
                alt={name}
                width={500}
                height={300}
-               className="w-full h-auto mb-2"
+               className="custom-picture object-cover rounded-lg mb-2"
             />
             <figcaption className="text-lg font-semibold mb-2">
                {name}
