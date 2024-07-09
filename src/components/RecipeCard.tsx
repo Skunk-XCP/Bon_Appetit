@@ -1,75 +1,44 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-
-type Ingredient = {
-   ingredient: string;
-   quantity?: number;
-   unit?: string;
-};
 
 type RecipeProps = {
    id: number;
    image: string;
    name: string;
-   servings: number;
-   ingredients: Ingredient[];
+   author: string;
    time: number;
-   description: string;
-   appliance: string;
-   ustensils: string[];
 };
 
-const Recipe: React.FC<RecipeProps> = ({
+const RecipeCard: React.FC<RecipeProps> = ({
+   id,
    image,
    name,
-   servings,
-   ingredients,
+   author,
    time,
-   description,
-   appliance,
-   ustensils,
 }) => {
    return (
-      <article className="custom-card mb-4 p-4 border rounded-lg bg-white shadow-md">
-         <figure>
-            <Image
-               src={`/pictures/${image}`}
-               alt={name}
-               width={500}
-               height={300}
-               className="custom-picture object-cover rounded-lg mb-2"
-            />
-            <figcaption className="text-lg font-semibold mb-2">
-               {name}
-            </figcaption>
-         </figure>
-         <p className="mb-2 text-black">
-            <strong>Description:</strong> {description}
-         </p>
-         <p className="mb-2 text-black">
-            <strong>Time:</strong> {time} minutes
-         </p>
-         <p className="mb-2 text-black">
-            <strong>Servings:</strong> {servings}
-         </p>
-         <h4 className="text-lg mb-1 text-black">Ingredients:</h4>
-         <ul className="mb-2 list-disc list-inside text-black">
-            {ingredients.map((ingredient, index) => (
-               <li key={index}>
-                  {ingredient.quantity && `${ingredient.quantity} `}
-                  {ingredient.unit && `${ingredient.unit} `}
-                  {ingredient.ingredient}
-               </li>
-            ))}
-         </ul>
-         <p className="mb-2 text-black">
-            <strong>Appliance:</strong> {appliance}
-         </p>
-         <p className="mb-2 text-black">
-            <strong>Ustensils:</strong> {ustensils.join(", ")}
-         </p>
-      </article>
+      <Link href={`/recipes/${id}`} passHref legacyBehavior>
+         <article className="custom-card mb-4 p-4 border rounded-lg bg-white shadow-md relative">
+            <figure>
+               <Image
+                  src={`/pictures/${image}`}
+                  alt={name}
+                  width={500}
+                  height={300}
+                  className="custom-picture object-cover rounded-lg mb-2"
+               />
+               <figcaption className="text-lg text-black font-semibold mb-2">
+                  <span className="text-black absolute top-5 right-5 bg-yellow-200 rounded-xl w-16 text-center text-sm">
+                     {time} min
+                  </span>
+                  <h2>{name}</h2>
+                  <p className="mb-2 text-black">{author}</p>
+               </figcaption>
+            </figure>
+         </article>
+      </Link>
    );
 };
 
-export default Recipe;
+export default RecipeCard;

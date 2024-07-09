@@ -4,6 +4,7 @@
          "id": 1,
          "image": "Recette01.jpg",
          "name": "Limonade de Coco",
+         "author": "Léa",
          "servings": 1,
          "ingredients": [
             {
@@ -38,6 +39,7 @@
          "id": 2,
          "image": "Recette02.jpg",
          "name": "Poisson Cru à la tahitienne",
+         "author": "Léa",
          "servings": 2,
          "ingredients": [
             {
@@ -76,6 +78,7 @@
          "id": 3,
          "image": "Recette03.jpg",
          "name": "Poulet coco réunionnais",
+         "author": "Jean",
          "servings": 4,
          "ingredients": [
             {
@@ -115,6 +118,7 @@
          "id": 4,
          "image": "Recette04.jpg",
          "name": "Salade de riz",
+         "author": "Jean",
          "servings": 4,
          "ingredients": [
             {
@@ -686,7 +690,7 @@
                "quantity": 1
             }
          ],
-         "time": 0,
+         "time": 5,
          "description": "Coupez les fruits en morceaux, ajouter le jus de citron et le lait ainsi que le sucre glace. Mixez. Ajoutez des glaçons si le lait n'a pas été mis au frais.",
          "appliance": "Blender",
          "ustensils": ["couteau", "verres", "presse citron"]
@@ -1734,7 +1738,7 @@
                "unit": "cuillères à soupe"
             }
          ],
-         "time": 0,
+         "time": 5,
          "description": "Découper les fruits. Le passer au blender jusqu'à obtenir une texture liquide. Mettre au frais. Servir",
          "appliance": "Blender",
          "ustensils": ["couteau", "verres"]
