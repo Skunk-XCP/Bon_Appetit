@@ -1,7 +1,8 @@
-import RecipePage from "@/components/RecipePage";
+"use client";
+import RecipePage from "@/app/recipes/RecipePage";
 import recipesData from "@/data/recipes.json";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 type Ingredient = {
    ingredient: string;

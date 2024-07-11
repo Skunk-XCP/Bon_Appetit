@@ -19,7 +19,7 @@ const RecipeCard: React.FC<RecipeProps> = ({
 }) => {
    return (
       <Link href={`/recipes/${id}`} passHref legacyBehavior>
-         <article className="custom-card mb-4 p-4 border rounded-lg bg-white shadow-md relative">
+         <article className="custom-card mb-4 p-4 border rounded-lg bg-white shadow-md relative cursor-pointer">
             <figure>
                <Image
                   src={`/pictures/${image}`}
@@ -32,7 +32,7 @@ const RecipeCard: React.FC<RecipeProps> = ({
                   <span className="text-black absolute top-5 right-5 bg-yellow-200 rounded-xl w-16 text-center text-sm">
                      {time} min
                   </span>
-                  <h2>{name}</h2>
+                  <h2 className="ellipsis">{name}</h2>
                   <p className="mb-2 text-black">{author}</p>
                </figcaption>
             </figure>

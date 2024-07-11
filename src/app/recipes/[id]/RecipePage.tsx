@@ -30,7 +30,7 @@ const RecipePage: React.FC<RecipeProps> = ({
    ustensils,
 }) => {
    return (
-      <article className="mb-4 p-4 border bg-white shadow-md">
+      <article className="p-4 border bg-white shadow-md">
          <figure>
             <Image
                src={`/pictures/${image}`}
@@ -38,6 +38,7 @@ const RecipePage: React.FC<RecipeProps> = ({
                width={500}
                height={300}
                className="custom-picture object-cover rounded-lg mb-2"
+               priority
             />
             <figcaption className="text-lg font-semibold mb-2">
                {name}
